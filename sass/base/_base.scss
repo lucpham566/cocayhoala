@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cuprum', sans-serif;
+
+}
+
+html {
+  font-size: 16px;
+  @media (max-width: 992px) {
+    font-size: 0.9rem;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(4, 53, 7); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(9, 75, 31); 
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: rgb(253, 253, 253) !important;
+  position: relative;
+  
+}
+
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+}

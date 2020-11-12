@@ -1,0 +1,13 @@
+.container-title-section{
+    .title-section{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-black;
+    }
+    .line{
+        height: 5px;
+        background: $color-secondary-light;
+    }
+}

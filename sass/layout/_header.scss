@@ -1,0 +1,287 @@
+header {
+  background: none !important;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 5px 0;
+  // @media (min-width: 1200px) {
+  //   padding: 0 2em;
+  // }
+  .navbar {
+    position: relative;
+    .logo {
+      height: 70px;
+    }
+    .nav-item {
+      position: relative;
+      .nav-link {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $color-white !important;
+        margin-left: 0.5em;
+        text-transform: uppercase;
+        &:hover {
+          color: $color-primary-light !important;
+        }
+        &.active {
+          color: $color-primary-light !important;
+        }
+      }
+      .sub-menu {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 220px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease 0.2s;
+        left: 50%;
+        transform: translateX(-50%);
+        .list {
+          .item {
+            border-bottom: 2px solid rgb(219, 219, 219);
+            .link {
+              display: block;
+              padding: 1em;
+              text-align: left;
+              color: $color-black;
+              font-weight: 500;
+              &:hover {
+                background-color: $color-secondary;
+              }
+            }
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+      }
+      &:hover {
+        .sub-menu {
+          visibility: inherit;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.scroll {
+    background: $color-black !important;
+    animation: moveInTop 0.3s ease-out;
+    .navbar {
+      .nav-item {
+        .nav-link {
+          color: $color-white !important;
+          &:hover {
+            color: $color-primary-light !important;
+          }
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(65, 64, 64);
+    opacity: 0.7;
+    display: none;
+    margin: 0;
+  }
+
+  .navbar-input {
+    display: none;
+  }
+  .navbar-input:checked ~ .overlay {
+    display: block;
+  }
+
+  .navbar-input:checked ~ .navbar-toggler-mobile {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* ------------- navbar-mobile --------------------*/
+  .navbar-toggler-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: rgb(248, 248, 248);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+
+    .container-logo {
+      display: flex;
+      justify-content: space-between;
+      margin: 1em;
+      .close {
+        cursor: pointer;
+        i:hover {
+          color: rgb(187, 187, 26);
+        }
+      }
+    }
+
+    ul {
+      margin-top: 200px;
+      li {
+        list-style: none;
+        color: black;
+        border-top: 1px solid rgb(189, 189, 189);
+        a {
+          display: block;
+          color: $color-secondary-light;
+          &:hover {
+            color: $color-secondary-dark;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .navbar-toggler {
+      cursor: pointer;
+      display: block !important;
+    }
+
+    .navbar #collapsibleNavId {
+      display: none !important;
+    }
+  }
+}
+
+.banner-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 110vh;
+
+  .slide {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #000;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    .background {
+      width: 100%;
+      height: 110vh;
+      background-image: url(/img/background7.jpg);
+      width: 1484px;
+      position: relative;
+      left: 0px;
+      top: 0px;
+      z-index: 10;
+      opacity: 1;
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .caption {
+      position: absolute;
+      width: 100%;
+      padding-top: 18em;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 11;
+      .title {
+        font-size: 3.8rem;
+        line-height: 60px;
+        color: #ffffff;
+        margin-bottom: 50px;
+        letter-spacing: 5px;
+        font-family: "Pacifico", cursive !important;
+        text-align: center;
+        @media (max-width: 768px) {
+          font-size: 2.8rem;
+        }
+      }
+      .text {
+        color: #ffffff;
+        margin-bottom: 50px;
+        font-size: 22px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        @media (max-width: 768px) {
+          font-size: 1.1rem;
+          letter-spacing: 2px;
+        }
+      }
+      .container-btn {
+        text-align: center;
+        .button {
+          margin: 5px;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 992px) {
+    }
+    @media (max-width: 767px) {
+    }
+  }
+  .carousel-banner {
+    .slick-prev {
+      position: absolute;
+      left: 5%;
+      z-index: 2;
+      opacity: 0;
+      transition: all ease 0.2s;
+      &::before {
+        font-family: "FontAwesome";
+        color: $color-secondary-dark !important;
+        font-size: 2rem;
+        font-weight: 900;
+        content: "\f0a8";
+      }
+    }
+    .slick-next {
+      position: absolute;
+      transition: all ease 0.2s;
+      right: 5%;
+      z-index: 2;
+      opacity: 0;
+      &::before {
+        font-family: "FontAwesome";
+        color: $color-secondary-dark !important;
+        font-size: 2rem;
+        font-weight: 900;
+        content: "\f0a9";
+      }
+    }
+    &:hover {
+      .slick-prev,
+      .slick-next {
+        opacity: 1;
+      }
+    }
+    .slick-dots {
+      bottom: 5px;
+      li {
+        button {
+          &::before {
+            font-size: 0.8rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.over-banner-top {
+  height: 110vh;
+}

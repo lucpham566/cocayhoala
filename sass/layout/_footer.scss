@@ -1,0 +1,48 @@
+footer {
+    background-color: rgb(85, 85, 85);
+    padding-bottom: 100px;
+    .contact-footer{
+      color: rgb(255, 237, 72);
+    }
+    .title{
+      color: $color-white;
+    }
+    .footer-contact{
+      input{
+        font-size: 0.8rem;
+        padding: 1em;
+      }
+    }
+  }
+  
+  footer {
+    display: inline-block;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul h6 {
+    color: white;
+  }
+  
+  footer p {
+    color: white;
+    font-size: 13px;
+  }
+  
+  footer .footer-contact li {
+    display: inline;
+  }
+  
+  footer .footer-contact img {
+    margin: 10px;
+    width: 50px;
+    border-radius: 10px;
+  }
+  
+  footer hr {
+    border: 1px solid white;
+  }
+  
