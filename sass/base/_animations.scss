@@ -89,3 +89,52 @@
         transform: translate(70%,-10%);
     }
 }
+
+@keyframes spin1 {
+    0%  {
+        transform: rotateZ(0);
+    }
+    50%  {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0%  {
+        transform: rotateZ(0);
+    }
+    50%  {
+        transform: rotateZ(-180deg);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes spin3 {
+    0%  {
+        transform: rotateZ(180deg);
+    }
+    50%  {
+        transform: rotateZ(360deg);
+    }
+    100% {
+        transform: rotateZ(540deg);
+    }
+}
+
+@keyframes spin4 {
+    0%  {
+        transform: rotateZ(-180deg);
+    }
+    50%  {
+        transform: rotateZ(-360deg);
+    }
+    100% {
+        transform: rotateZ(-540deg);
+    }
+}
+
