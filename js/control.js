@@ -18,6 +18,46 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
+  
+  $(".carousel-testimonier").slick({
+    infinite: true,
+    dots:false,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1008,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
 
+    ]
+  });
+  
+  $(".carousel-special-products").slick({
+    infinite: true,
+    dots:false,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+
+  });
+  
+  $(".tab-a").click(function () {
+    $(".tab").removeClass("tab-active");
+    $(".tab[data-id='" + $(this).attr("data-id") + "']").addClass("tab-active");
+    $(".tab-a").removeClass("active-a");
+    $(this).parent().find(".tab-a").addClass("active-a");
+  });
 });
 

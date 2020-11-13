@@ -42,9 +42,20 @@
   }
 }
 
+.btn-main-outline {
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  transition: all .3s ease;
+  &:hover {
+    color: $color-white;
+    background: $color-primary;
+  }
+}
+
 .btn-main-outline-secondary {
   border: 1px solid $color-secondary-dark;
   color: $color-secondary-dark;
+  transition: all .3s ease;
   &:hover {
     color: $color-white;
     background: $color-secondary-dark;
@@ -54,6 +65,7 @@
 .btn-main-outline-tertiary {
   border: 1px solid $color-tertiary-dark;
   color: $color-tertiary-dark;
+  transition: all .3s ease;
   &:hover {
     color: $color-white;
     background: $color-tertiary-dark;
