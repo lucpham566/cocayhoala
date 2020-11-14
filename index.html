@@ -69,12 +69,16 @@
 
     <header class="header-menu">
       <div class="container p-0">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="#">
             <img src="./img/logo.webp" alt="" class="logo" />
           </a>
+          <a class="cart-mobile ml-auto" href="" class="ml-auto">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <span>0</span>
+          </a>
           <label for="navbar-toggler" class="navbar-toggler ml-auto">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa fa-bars" aria-hidden="true"></i>
         </label>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -186,8 +190,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="">Liên Hệ Với Chúng Tôi</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+              <li class="nav-item search">
+                <a class="nav-link btn-sch"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <div class="content">
+                  <div class="search-container">
+                    <form action="/action_page.php">
+                      <input
+                        type="text"
+                        placeholder="Tìm kiếm tại đây..."
+                        name="search"
+                      />
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -196,35 +212,131 @@
           <label for="navbar-toggler" class="overlay"></label>
           <div class="navbar-toggler-mobile pt-3 pl-2">
               <div class="container-logo">
-                <label for="navbar-toggler" class="close"><i class="fa fa-times" aria-hidden="true"></i>
+                <img src="./img/logo.webp" alt="" height="50px">
+                <label for="navbar-toggler" class="close">
+                  <span>Đóng</span><i class="fa fa-times" aria-hidden="true"></i>
                 </label>
               </div>
-              <ul class="mr-auto p-0 mt-2 mt-lg-0">
-                  <li class="nav-item-mobile active">
-                      <a class="nav-link" href="#">Trang chủ</span></a>
-                  </li>
-                  <li class="nav-item-mobile">
-                      <a class="nav-link" href="#">Chúng tôi</a>
-                  </li>
-                  <li class="nav-item-mobile dropdown">
-                      <a class="nav-link" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false">Danh sách sản phẩm</a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownId">
-                          <a class="dropdown-item" href="#">Tất cả sản phẩm</a>
-                          <a class="dropdown-item" href="#">Bọc nội thất</a>
-                          <a class="dropdown-item" href="#">Bọc nội thất</a>
-                          <a class="dropdown-item" href="#">Bọc nội thất</a>
-                      </div>
-                  </li>
-                  <li class="nav-item-mobile">
-                    <a class="nav-link" href="#">Tin tức</a>
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input
+                    type="text"
+                    placeholder="Tìm kiếm tại đây..."
+                    name="search"
+                  />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+              <div class="clear-fl"></div>
+              <ul class="nav-list mr-auto p-0 mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Trang chủ</a>
                 </li>
-                <li class="nav-item-mobile">
-                  <a class="nav-link" href="#">Giỏ hàng</a>
-              </li>
-              <li class="nav-item-mobile">
-                <a class="nav-link" href="#">Liên hệ</a>
-            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">Chuyện về lá <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                  <div class="sub-menu">
+                    <ul class="list">
+                      <li class="item">
+                        <a href="" class="link">Câu Chuyện Thương Hiệu</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Thành Tích Đạt Được</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Hoạt Động Vì Cộng Đồng</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Báo Chí Nói Về Chúng Tôi</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Ban Cố Vấn Chuyên Môn</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Người Nổi Tiếng Nói Về Chúng Tôi</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Phản Hồi Của Khách Hàng</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chính Sách Đại Lý,CTV</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Địa Điểm Bán Hàng</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">Sản Phẩm <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                  <div class="sub-menu">
+                    <ul class="list">
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Tóc</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Cơ Thể</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Dưỡng Da</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Vệ Sinh Nhà Cửa</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Răng Miệng</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Vùng Kín</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Dầu Gội Thảo Dược</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Khỏe Đẹp Cùng Lá <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                  <div class="sub-menu">
+                    <ul class="list">
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Tóc</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Cơ Thể</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Dưỡng Da</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Vệ Sinh Nhà Cửa</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Răng Miệng</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Chăm Sóc Vùng Kín</a>
+                      </li>
+                      <li class="item">
+                        <a href="" class="link">Dầu Gội Thảo Dược</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Khuyến mãi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Kiến Thức Chuyên Sâu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Liên Hệ Với Chúng Tôi</a>
+                </li>
               </ul>
           </div>
         </nav>
@@ -247,8 +359,8 @@
                 Dẫn đầu xu hướng sống xanh
               </p>
               <div class="container-btn">
-                <div class="button btn-main">TÌM HIỂU THÊM</div>
-                <div class="button btn-outline-white">TẤT CẢ SẢN PHẨM</div>
+                <div class="button btn-main btn-left">TÌM HIỂU THÊM</div>
+                <div class="button btn-outline-white btn-right">TẤT CẢ SẢN PHẨM</div>
               </div>
             </div>
           </div>
@@ -257,7 +369,7 @@
     
     </div>
 
-    <div class="home">
+    <main class="home">
       <div class="story-us">
         <h2 class="title-section">
           Chuyện Của Lá
@@ -2699,7 +2811,8 @@
           <div class="row">
             <div class="col-lg-6">
                 <div class="video">
-                  <iframe width="555" height="312" src="https://www.youtube.com/embed/n7nnZ_dObu8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+                  <iframe  height="312" src="https://www.youtube.com/embed/n7nnZ_dObu8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+                </div>
             </div>
             <div class="col-lg-6">
               <div class="new-list">
@@ -2764,7 +2877,53 @@
           </div>
         </div>
       </div>
-    </div>
+      <div class="container-gallery container">
+        <div class="carousel-gallery">
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="img">
+                <img src="./img/hg_1.webp" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <a href="#" class="back-to-top">
       <div class="circle"></div>
@@ -2942,6 +3101,48 @@
         Copyrights © 2017 by ONA Global
       </h6>
     </footer>
+
+    <div class="addThis_listSharing">
+      <ul class="addThis_listing">
+
+        <li class="addThis_item">
+          <a class="addThis_item--icon" href="tel:1900633385" rel="nofollow" style="background:#11301b">
+            <img src="./img/addthis_icon1_ico.webp" alt="icon" />
+            <span class="tooltip-text">1900633385</span>
+          </a>
+        </li>
+        
+        <li class="addThis_item">
+          <a class="addThis_item--icon" href="https://www.facebook.com/cocayhoala/" rel="nofollow" style="background:#2d8cdb">
+            <img src="./img/addthis_icon2_ico.webp" alt="icon" />
+            <span class="tooltip-text">Facebook</span>
+          </a>
+        </li>
+        
+        
+        <li class="addThis_item">
+          <a class="addThis_item--icon" href="" rel="nofollow" style="background:#e73434">
+            <img src="./img/addthis_icon3_ico.webp" alt="icon" />
+            <span class="tooltip-text">Youtube</span>
+          </a>
+        </li>
+        
+        <li class="addThis_item">
+          <a class="addThis_item--icon" href="https://shopee.vn/cocayhoala" rel="nofollow" style="background:#ec7d06">
+            <img src="./img/addthis_icon4_ico.webp" alt="icon" />
+            <span class="tooltip-text">Shopee</span>
+          </a>
+        </li>
+        
+        <li class="addThis_item">
+          <a class="addThis_item--icon" href="https://tiki.vn/cua-hang/o-moc-khang-ngan-ngua-bac-toc-som" rel="nofollow" style="background:#0e5cd1">
+            <img src="./img/addthis_icon5_ico.webp" alt="icon" />
+            <span class="tooltip-text">Tiki</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
 
       <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

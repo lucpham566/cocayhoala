@@ -7,6 +7,29 @@ header {
   @media (max-width: 1200px) {
     position: relative;
   }
+  .cart-mobile {
+    display: none;
+    color: #ffffff;
+    position: absolute;
+    font-size: 2rem;
+    right: 100px;
+    &:hover{
+      color: #ffffff;
+    }
+    span {
+      position: absolute;
+      background: $color-primary-light;
+      color: white;
+      padding: 1px 3px;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      font-size: 1rem;
+    }
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
   .navbar {
     padding-left: 0;
     padding-right: 0;
@@ -40,6 +63,7 @@ header {
         transform: translateY(100px);
         transition: all ease 0.5s;
         right: 0;
+        z-index: 100;
         .list {
           .item {
             .link {
@@ -62,12 +86,68 @@ header {
         .sub-menu {
           visibility: inherit;
           opacity: 1;
-        transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+    }
+    .search {
+      position: relative;
+      .content {
+        width: 400px;
+        transform: translateX(120px);
+        position: absolute;
+        right: 0;
+        display: none;
+        .search-container {
+          margin-bottom: 1em;
+          float: left;
+          animation: moveInBottom 0.3s ease-out;
+          input[type="text"] {
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+            padding: 6px;
+            padding-left: 1em;
+            font-size: 1rem;
+            border: none;
+            width: 250px;
+            @media (max-width: 1200px) {
+              width: 200px;
+            }
+          }
 
+          button {
+            float: right;
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+            padding: 6px 10px;
+            margin-right: 16px;
+            background: rgb(219, 219, 219);
+            font-size: 1rem;
+            border: none;
+            color: $color-primary-dark;
+            cursor: pointer;
+          }
+
+          button:hover {
+            background: rgb(155, 155, 155);
+          }
         }
       }
     }
   }
+
+  &.search_ac {
+    .navbar {
+      .search {
+        .content {
+          .search-container {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
   &.scroll {
     background: $color-black !important;
     animation: moveInTop 0.3s ease-out;
@@ -77,6 +157,14 @@ header {
           color: $color-white !important;
           &:hover {
             color: $color-primary-light !important;
+          }
+          .over-lay {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
           }
         }
       }
@@ -108,6 +196,7 @@ header {
   }
 
   /* ------------- navbar-mobile --------------------*/
+
   .navbar-toggler-mobile {
     position: fixed;
     top: 0;
@@ -115,36 +204,73 @@ header {
     right: 0;
     width: 320px;
     max-width: 100%;
-    background-color: rgb(248, 248, 248);
+    background-color: rgba(248, 248, 248, 0.1);
     transform: translateX(100%);
     opacity: 0;
     transition: all linear 0.3s;
-
+    border-left: 1px solid rgb(255, 255, 255);
     .container-logo {
       display: flex;
       justify-content: space-between;
       margin: 1em;
       .close {
+        color: rgb(255, 255, 255);
         cursor: pointer;
-        i:hover {
-          color: rgb(187, 187, 26);
+        font-size: 1rem;
+        text-shadow: none;
+        &:hover {
+          color: rgb(9, 56, 3);
         }
       }
     }
 
-    ul {
+    .nav-list {
       margin-top: 200px;
-      li {
+      .nav-item {
         list-style: none;
         color: black;
         border-top: 1px solid rgb(189, 189, 189);
-        a {
+        .nav-link {
           display: block;
-          color: $color-secondary-light;
           &:hover {
-            color: $color-secondary-dark;
+            color: $color-primary-light;
           }
         }
+      }
+    }
+
+    .search-container {
+      display: block;
+      margin-bottom: 1em;
+      float: left;
+      input[type="text"] {
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        padding: 6px;
+        padding-left: 1em;
+        font-size: 1rem;
+        border: none;
+        width: 250px;
+        @media (max-width: 1200px) {
+          width: 200px;
+        }
+      }
+
+      button {
+        float: right;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        padding: 6px 10px;
+        margin-right: 16px;
+        background: rgb(219, 219, 219);
+        font-size: 1rem;
+        border: none;
+        color: $color-primary-dark;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: rgb(155, 155, 155);
       }
     }
   }
@@ -154,6 +280,7 @@ header {
       cursor: pointer;
       display: block !important;
       color: white !important;
+      font-size: 3rem !important;
     }
 
     .navbar #collapsibleNavId {
@@ -198,6 +325,7 @@ header {
       left: 50%;
       transform: translateX(-50%);
       z-index: 11;
+      animation: moveInTopCaption 2s ease-out;
       .title {
         font-size: 3.8rem;
         line-height: 60px;
@@ -226,6 +354,12 @@ header {
         text-align: center;
         .button {
           margin: 5px;
+          &.btn-right {
+            animation: moveInRight 1s ease-out 1s;
+          }
+          &.btn-left {
+            animation: moveInLeft 1s ease-out 1s;
+          }
         }
       }
     }
